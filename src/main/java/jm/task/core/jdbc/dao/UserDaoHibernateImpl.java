@@ -101,7 +101,7 @@ public class UserDaoHibernateImpl implements UserDao {
     }
 
     @Override
-    public List<User> getAllUsers() {
+    public List<User> getAllUsers() { // не нашёл как сделать через createNativeQuery
         Session session = sessionFactory.openSession();
         return session.createQuery("from User", User.class).list();
     }
